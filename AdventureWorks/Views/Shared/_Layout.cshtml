@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/style1.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+</head>
+<body class="backgroundStuff">
+    <div>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    
+                    @Html.ActionLink("Adventureworks", "Index", "Home", new { area = "" }, new { @class = "navbar-brand", @style = "padding-top:25px; font-size:22px" })
+                    
+                    <div class="bar" id="div1" style="width:100px;">
+                        <div class="dropdown">
+                            <button class="dropdown-toggle btn" type="button" data-toggle="dropdown">
+                                Bikes
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Mountain", "List", "Home", new { main = "Bikes", sub = "Mountain Bikes" }, new { @style = "color:#ffffff;" })</li>
+                                <li>@Html.ActionLink("Road", "List", "Home", new { main = "Bikes", sub = "Road Bikes" }, new { @style = "color:#ffffff;" })</li>
+                                <li>@Html.ActionLink("Touring", "List", "Home", new { main = "Bikes", sub = "Touring Bikes" }, new { @style = "color:#ffffff;" })</li>
+                                <li>@Html.ActionLink("All", "List", "Home", new { main = "Bikes" }, new { @style = "color:#ffffff;" })</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="bar" id="div1" style="width:100px">
+                        <div class="dropdown">
+                            <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+                                Component
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Handlebars", "List", "Home", new { main = "Components", sub = "Handlebars" }, new { @style = "color:#ffffff;" })</li>
+                                <li>@Html.ActionLink("Bottom Brackets", "List", "Home", new { main = "Components", sub = "Bottom Brackets" }, new { @style = "color:#ffffff;" })</li>
+                                <li>@Html.ActionLink("Brakes", "List", "Home", new { main = "Components", sub = "Brakes" }, new { @style = "color:#ffffff;" })</li>
+                                <li>@Html.ActionLink("Chains", "List", "Home", new { main = "Components", sub = "Chains" }, new { @style = "color:#ffffff;" })</li>
+                                <li>@Html.ActionLink("Cranksets", "List", "Home", new { main = "Components", sub = "Cranksets" }, new { @style = "color:#ffffff;" })</li>
+                                <li>@Html.ActionLink("Derailleurs", "List", "Home", new { main = "Components", sub = "Derailleurs" }, new { @style = "color:#ffffff;" })</li>
+                                <li>@Html.ActionLink("Forks", "List", "Home", new { main = "Components", sub = "Forks" }, new { @style = "color:#ffffff;" })</li>
+                                <li>@Html.ActionLink("Headsets", "List", "Home", new { main = "Components", sub = "Headsets" }, new { @style = "color:#ffffff;" })</li>
+                                <li>@Html.ActionLink("Mountain Frames", "List", "Home", new { main = "Components", sub = "Mountain Frames" }, new { @style = "color:#ffffff;" })</li>
+                                <li>@Html.ActionLink("Pedals", "List", "Home", new { main = "Components", sub = "Pedals" }, new { @style = "color:#ffffff;" })</li>
+                                <li>@Html.ActionLink("Road Frames", "List", "Home", new { main = "Components", sub = "Road Frames" }, new { @style = "color:#ffffff;" })</li>
+                                <li>@Html.ActionLink("Saddles", "List", "Home", new { main = "Components", sub = "Saddles" }, new { @style = "color:#ffffff;" })</li>
+                                <li>@Html.ActionLink("Touring Frames", "List", "Home", new { main = "Components", sub = "Touring Frames" }, new { @style = "color:#ffffff;" })</li>
+                                <li>@Html.ActionLink("Wheels", "List", "Home", new { main = "Components", sub = "Wheels" }, new { @style = "color:#ffffff;" })</li>
+                                <li>@Html.ActionLink("All", "List", "Home", new { main = "Components" }, new { @style = "color:#ffffff;" })</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="bar" id="div1" style="width:100px">
+                        <div class="dropdown">
+                            <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+                                Clothing
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Bib-Shorts", "List", "Home", new { main = "Clothing", sub = "Bib-Shorts" }, new { @style = "color:#ffffff;" })</li>
+                                <li>@Html.ActionLink("Caps", "List", "Home", new { main = "Clothing", sub = "Caps" }, new { @style = "color:#ffffff;" })</li>
+                                <li>@Html.ActionLink("Gloves", "List", "Home", new { main = "Clothing", sub = "Gloves" }, new { @style = "color:#ffffff;" })</li>
+                                <li>@Html.ActionLink("Jerseys", "List", "Home", new { main = "Clothing", sub = "Jerseys" }, new { @style = "color:#ffffff;" })</li>
+                                <li>@Html.ActionLink("Shorts", "List", "Home", new { main = "Clothing", sub = "Shorts" }, new { @style = "color:#ffffff;" })</li>
+                                <li>@Html.ActionLink("Socks", "List", "Home", new { main = "Clothing", sub = "Socks" }, new { @style = "color:#ffffff;" })</li>
+                                <li>@Html.ActionLink("Tights", "List", "Home", new { main = "Clothing", sub = "Tights" }, new { @style = "color:#ffffff;" })</li>
+                                <li>@Html.ActionLink("Vests", "List", "Home", new { main = "Clothing", sub = "Vests" }, new { @style = "color:#ffffff;" })</li>
+                                <li>@Html.ActionLink("All", "List", "Home", new { main = "Clothing" }, new { @style = "color:#ffffff;" })</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="bar" id="div1" style="width:100px">
+                        <div class="dropdown">
+                            <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+                                Accesories
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Bike Racks", "List", "Home", new { main = "Accessories", sub = "Bike Racks" }, new { @style = "color:#ffffff;" })</li>
+                                <li>@Html.ActionLink("Bike Stands", "List", "Home", new { main = "Accessories", sub = "Bike Stands" }, new { @style = "color:#ffffff;" })</li>
+                                <li>@Html.ActionLink("Bottles and Cages", "List", "Home", new { main = "Accessories", sub = "Bottles and Cages" }, new { @style = "color:#ffffff;" })</li>
+                                <li>@Html.ActionLink("Cleaners", "List", "Home", new { main = "Accessories", sub = "Cleaners" }, new { @style = "color:#ffffff;" })</li>
+                                <li>@Html.ActionLink("Fenders", "List", "Home", new { main = "Accessories", sub = "Fenders" }, new { @style = "color:#ffffff;" })</li>
+                                <li>@Html.ActionLink("Helmets", "List", "Home", new { main = "Accessories", sub = "Helmets" }, new { @style = "color:#ffffff;" })</li>
+                                <li>@Html.ActionLink("Hydration Packs", "List", "Home", new { main = "Accessories", sub = "Hydration Packs" }, new { @style = "color:#ffffff;" })</li>
+                                <li>@Html.ActionLink("Lights", "List", "Home", new { main = "Accessories", sub = "Lights" }, new { @style = "color:#ffffff;" })</li>
+                                <li>@Html.ActionLink("Locks", "List", "Home", new { main = "Accessories", sub = "Locks" }, new { @style = "color:#ffffff;" })</li>
+                                <li>@Html.ActionLink("Panniers", "List", "Home", new { main = "Accessories", sub = "Panniers" }, new { @style = "color:#ffffff;" })</li>
+                                <li>@Html.ActionLink("Pumps", "List", "Home", new { main = "Accessories", sub = "Pumps" }, new { @style = "color:#ffffff;" })</li>
+                                <li>@Html.ActionLink("Tires and Tubes", "List", "Home", new { main = "Accessories", sub = "Tires and Tubes" }, new { @style = "color:#ffffff;" })</li>
+                                <li>@Html.ActionLink("All", "List", "Home", new { main = "Accessories" }, new { @style = "color:#ffffff;" })</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav"></ul>
+                </div>
+            </div>
+        </div>
+        <div class="container body-content">
+            @RenderBody()
+            <hr />
+        </div>
+    </div>
+
+
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+<footer style="background-color:rgb(20, 20, 20); position:center; color:white; padding-bottom: 60px; margin-bottom: -100000px; color:lightgray;">
+    <div style="text-align:center;">
+        <br/>
+        How are we doing? Give us feedback at wleingang15@mail.wou.edu
+        <hr style="border-color:white" />
+        2017 Adventure Works, Inc. All right reserved. Adventure Works and the Adventure Works logo
+        <br />
+        are not trademarks of the Adventure Works, Inc.
+    </div>
+</footer>
+</html>

@@ -1,0 +1,50 @@
+﻿@model IEnumerable<AdventureWorks.Models.ViewModels.ProductCatVM>
+
+@{
+    ViewBag.Title = "List";
+}
+
+<div class="trans">
+    <h2>Products</h2>
+
+    <div class="row">
+
+        @foreach (var i in Model)
+        {
+            <div class="col-md-3" style="padding: 10px 10px 10px 10px; width:244px">
+                <div class="col-md-3" style="background-color:rgb(225, 225, 225); padding: 6px 6px 6px 6px; width:240px">
+                    <div class="row">
+                        <div class="col-md-4" style="width:250px">
+                            <div>
+                                <div>
+                                    @{
+                                        var image = String.Format("data:image/gif;base64,{0}", Convert.ToBase64String(i.image.LargePhoto));
+                                    }
+
+                                    <a href="@Url.Action("Product", "Home", new { id = (i.prod.ProductID) }, null)">
+                                        <img alt="ERROR" src="@image" ; style="width:230px" />
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div style="padding-left:25px; font-size:17px">
+                            @Html.DisplayFor(modelItem => i.prod.Name)
+                        </div>
+                        <div style="padding-left:25px; color:darkgreen;">
+                            Our Price: $@Html.DisplayFor(modelItem => i.prod.StandardCost)
+                        </div>
+                        <div style="color:grey; font-size: 12px; padding-left: 27px">
+                            List Price: $@Html.DisplayFor(modelItem => i.prod.ListPrice)
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+         }
+    </div>
+</div>
+
+
+
+

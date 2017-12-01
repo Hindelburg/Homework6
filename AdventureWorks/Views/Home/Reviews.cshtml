@@ -1,0 +1,80 @@
+﻿@model AdventureWorks.Models.ViewModels.ProductCatVM
+
+@{
+    ViewBag.Title = "Reviews";
+}
+
+<div class="trans">
+    <div class="row">
+        <div class="col-md-4" style="padding-left:30px; width:400px">
+            <div style="background-color:rgb(225, 225, 225); padding: 10px 10px 10px 10px; width:370px">
+                <div>
+                    @{
+                        var image = String.Format("data:image/gif;base64,{0}", Convert.ToBase64String(Model.image.LargePhoto));
+                    }
+                    <img src="@image" ; style="width:350px" />
+                </div>
+            </div>
+        </div>
+ 
+    <div class="review">
+        <form method="post" action="Product" style="background-color:lightgray; padding:5px 5px 5px 5px">
+            <div>
+                <label for="name" style="width: 60px">Name</label>
+                <input type="text" name="name" value="" style="width: 300px" />
+
+                <br />
+
+                <label for="email" style="width: 60px">Email</label>
+                <input type="text" name="email" value="" style="width: 300px" />
+
+                <br />
+
+                <label for="rating" style="width: 60px">Rating</label>
+                <input type="text" name="rating" value="" style="width: 300px" /> out of 5
+            </div>
+            <div>
+                <label for="message" style="width: 60px">Message</label>
+                <textarea name="message" style="background-color:aliceblue; height: 200px; width: 1000px; padding: 3px; border: none;" placeholder="Enter comments here..."></textarea>
+            </div>
+            <div>
+                <input type="submit" name="submit" value="Submit" />
+            </div>
+        </form>
+    </div>
+
+    <br />
+
+    <h3>
+        Product Reviews
+    </h3>
+
+    <hr style="border-color:black" />
+
+    <div style="padding-left:10px; padding-right:10px">
+        @foreach (var i in Model.reviews)
+        {
+            <div style="background-color:lightgray; padding:5px 5px 5px 5px">
+                <div>
+                    <div style="font-size: 20px">
+                        @Html.DisplayFor(modelItem => i.name)
+                    </div>
+                    <div style="color:grey">
+                        @Html.DisplayFor(modelItem => i.email)
+                    </div>
+                    <div style="padding-left: 5px">
+                        @for (var i2 = 0; i2 < i.rating && i2 < 5; i2++)
+                        {
+                            <img src="\images\star.png" alt="This is a big problem..." style="width:15px;height:15px;">
+                        }
+                    </div>
+                </div>
+
+                <p style="background-color:white; width: 100%;">
+                    "@Html.DisplayFor(modelItem => i.message)"
+                </p>
+            </div>
+            <br />
+        }
+    </div>
+</div>

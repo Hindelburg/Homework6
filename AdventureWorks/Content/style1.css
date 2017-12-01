@@ -1,0 +1,58 @@
+﻿.dropdown-toggle {
+    background-color: #222222;
+    color: #999999;
+}
+
+.btn {
+    padding-top: 15px;
+    background-color: #222222;
+    color: #999999;
+}
+
+.dropdown-menu {
+    background-color: #222222;
+    color: #999999;
+}
+
+.bar {
+    background-color: #222222;
+    color: #999999;
+}
+
+.btn:hover {
+    color: #ffffff;
+}
+
+.backgroundStuff {
+    background-image: url('/images/background.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.trans {
+    padding: 60px 60px 60px 60px;
+    background: rgba(205,205,205,0.7);
+}
+
+
+
+#div1 {
+    float: left;
+    width: 10%;
+    padding: 10px;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.child-div{
+    /*overflow: hidden;*/
+}
+
+p {
+    margin: 0;
+}
+div{
+    margin: 0;
+}
